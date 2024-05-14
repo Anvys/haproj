@@ -1,0 +1,24 @@
+.Button{
+  cursor: pointer;
+  color: inherit;
+}
+
+.clear{
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+}
+
+.collapser{
+  position: absolute;
+  right: -14px;
+  top: calc(50vh - var(--navbar-height));
+  width: 14px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  background: var(--bg-color-inverted);
+  border: 0;
+  border-radius: 0 7px 7px 0;
+}
