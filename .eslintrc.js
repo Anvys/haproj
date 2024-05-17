@@ -1,10 +1,21 @@
 module.exports = {
+    settings: {
+        react: {
+            version: '18.3',
+        },
+    },
     env: {
         browser: true,
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+    extends: [
+        'plugin:react/jsx-runtime',
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -14,7 +25,8 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: [
-        'react',
+        'eslint-plugin-react',
+        // 'react',
         '@typescript-eslint',
         'i18next',
     ],
@@ -30,7 +42,6 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
-        'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
@@ -40,6 +51,8 @@ module.exports = {
         'i18next/no-literal-string': ['warn', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         'consistent-return': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-uses-react': 'off',
     },
     globals: {
         __IS_DEV__: true,
