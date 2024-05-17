@@ -1,15 +1,15 @@
 import { useContext } from 'react';
-import { ETheme, LS_THEME_KEY, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import { EGlobalThemes, LS_THEME_KEY, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
 
 type TUseThemeResult = {
-    theme: ETheme
+    theme: EGlobalThemes
     doToggleTheme: () => void
 }
 export const useTheme = (): TUseThemeResult => {
     const { theme, setTheme } = useContext(ThemeContext);
 
     const doToggleTheme = () => {
-        const newTheme = theme === ETheme.LIGHT ? ETheme.DARK : ETheme.LIGHT;
+        const newTheme = theme === EGlobalThemes.LIGHT ? EGlobalThemes.DARK : EGlobalThemes.LIGHT;
         setTheme(newTheme);
         localStorage.setItem(LS_THEME_KEY, newTheme);
     };

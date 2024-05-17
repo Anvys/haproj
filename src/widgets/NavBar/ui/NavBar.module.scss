@@ -1,13 +1,19 @@
-.NavBar{
-  height: var(--navbar-height);
-  background-color: var(--bg-color-inverted);
-  color: var(--primary-color-inverted);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.NavBar {
+    height: var(--navbar-height);
+    background-color: var(--bg-color-inverted);
+    color: var(--primary-color-inverted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
 }
 
-.links{
-  display: flex;
-  gap: 8px;
+.links {
+    display: flex;
+    gap: 8px;
+}
+
+.switchers {
+    display: flex;
+    gap: 4px;
 }

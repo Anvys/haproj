@@ -17,10 +17,14 @@ export const NavBar: FC<INavBarProps> = (props) => {
         <div className={cn(cls.NavBar, {}, [className])}>
             <div />
             <div className={cn(cls.links)}>
-                <AppLink theme={ELinkTheme.SECONDARY} to="/welcome">Welcome</AppLink>
-                <AppLink theme={ELinkTheme.SECONDARY} to="/about">About</AppLink>
+                <AppLink theme={ELinkTheme.SECONDARY} to="/welcome">
+                    Welcome
+                </AppLink>
+                <AppLink theme={ELinkTheme.SECONDARY} to="/about">
+                    About
+                </AppLink>
             </div>
-            <div>
+            <div className={cn(cls.switchers)}>
                 <LangSwitcher />
                 <SimpleThemeSwitch />
             </div>

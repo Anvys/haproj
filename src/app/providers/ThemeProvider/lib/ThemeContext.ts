@@ -1,13 +1,13 @@
 import { createContext } from 'react';
 
-export enum ETheme{
+export enum EGlobalThemes{
     LIGHT = 'light',
     DARK= 'dark',
 }
 
 type TThemeContext = {
-    theme: ETheme
-    setTheme: (theme: ETheme) => void
+    theme: EGlobalThemes
+    setTheme: (theme: EGlobalThemes) => void
 }
 
 export const ThemeContext = createContext<TThemeContext>({} as TThemeContext);

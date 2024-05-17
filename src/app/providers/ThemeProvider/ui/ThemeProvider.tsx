@@ -1,15 +1,15 @@
 import {
     FC, ReactNode, useMemo, useState,
 } from 'react';
-import { ETheme, LS_THEME_KEY, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import { EGlobalThemes, LS_THEME_KEY, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
 
-const defaultTheme = localStorage.getItem(LS_THEME_KEY) as ETheme || ETheme.LIGHT;
+const defaultTheme = localStorage.getItem(LS_THEME_KEY) as EGlobalThemes || EGlobalThemes.LIGHT;
 
 type ThemeProviderProps = {
     children?: ReactNode | undefined
 }
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-    const [theme, setTheme] = useState<ETheme>(() => defaultTheme);
+    const [theme, setTheme] = useState<EGlobalThemes>(() => defaultTheme);
 
     const defaultValue = useMemo(() => ({
         theme,
