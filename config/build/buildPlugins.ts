@@ -8,7 +8,7 @@ import { TBuildOptions } from './types/types';
 export const buildPlugins = (options: TBuildOptions): Configuration['plugins'] => {
     const { mode, paths } = options;
     const isDev = mode === 'development';
-    const isProd = mode === 'production';
+    // const isProd = mode === 'production';
 
     const plugins: Configuration['plugins'] = [
         new HtmlWebpackPlugin({
@@ -30,9 +30,9 @@ export const buildPlugins = (options: TBuildOptions): Configuration['plugins'] =
         plugins.push(new ReactRefreshWebpackPlugin());
     }
 
-    if (isProd) {
-
-    }
+    // if (isProd) {
+    //
+    // }
     return plugins;
 };
 

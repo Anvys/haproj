@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider/lib/useTheme';
 import { SideBar } from 'widgets/SideBar';
 import { AppRouter } from 'app/providers/Router';

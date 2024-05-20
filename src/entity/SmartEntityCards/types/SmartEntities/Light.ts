@@ -3,7 +3,6 @@ import { TCommonEntity } from './common';
 /**
  * Лампочки
  */
-export type TLight_All = TLight | TLight_bri
 
 export type TLight = TCommonEntity & {
     power: boolean
@@ -16,3 +15,5 @@ export type TLight = TCommonEntity & {
 export type TLight_bri = TLight & {
     brightness: number
 }
+
+export type TLight_All = TLight | TLight_bri

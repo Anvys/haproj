@@ -10,7 +10,10 @@ export const SimpleSwitch: FC<TProps> = ({
     selectedValue,
     onChange,
 }) => (
-    <div className={`Switch ${selectedValue ? 'inactive' : 'active'}`} onClick={() => onChange(!selectedValue)}>
+    <div
+        className={`Switch ${selectedValue ? 'inactive' : 'active'}`}
+        onClick={() => onChange(!selectedValue)}
+    >
         {/* Выключено / Лево */}
         <div className={`sw_item ${selectedValue ? 'inactive' : 'active'}`} />
 

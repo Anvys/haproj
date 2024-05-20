@@ -17,7 +17,7 @@ export const SimpleControlCard: FC<TProps> = ({
     <div className="SimpleControlCard">
         {icon && (
             <div className="SimpleControlCard_icon">
-                <img src={icon} width={30} />
+                <img alt="" src={icon} width={30} />
             </div>
         )}
         <div className="SimpleControlCard_content">
