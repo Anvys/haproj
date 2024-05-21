@@ -9,10 +9,6 @@
     cursor: pointer;
     background-color: var(--bg-color);
 
-    .sw_item.active {
-        background-color: var(--bg-color-inverted);
-    }
-
     .sw_item {
         width: 20px;
         height: 20px;
@@ -21,6 +17,7 @@
 
         &.active {
             border-color: white;
+            background-color: var(--bg-color-inverted);
         }
 
         &.inactive {

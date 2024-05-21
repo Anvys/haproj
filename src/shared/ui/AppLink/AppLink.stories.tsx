@@ -4,6 +4,8 @@
 
 import { Meta } from '@storybook/react/*';
 import { StoryObj } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { AppLink, ELinkTheme } from './AppLink';
 
 const meta = {
@@ -34,6 +36,9 @@ export const Configurable: Story = {
         children: 'AppLink!',
     },
 };
+
+export const ConfigurableDark = { ...Configurable };
+ConfigurableDark.decorators = [ThemeDecorator(EGlobalThemes.DARK)];
 export const Primary: Story = {
     args: {
         to: '/somelink',

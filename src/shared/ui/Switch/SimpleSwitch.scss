@@ -1,5 +1,5 @@
-$colorOn: rgb(60 204 119 / 71%);
-$colorOff: #5e5d5d;
+$color-on: rgb(60 204 119 / 71%);
+$color-off: #5e5d5d;
 
 .Switch {
     display: flex;
@@ -10,22 +10,6 @@ $colorOff: #5e5d5d;
     padding: 2px 4px;
     width: fit-content;
     cursor: pointer;
-
-    &.active {
-        background-color: $colorOff;
-
-        .sw_item.active {
-            background-color: $colorOn;
-        }
-    }
-
-    &.inactive {
-        background-color: $colorOn;
-
-        .sw_item.active {
-            background-color: $colorOff;
-        }
-    }
 
     .sw_item {
         width: 20px;
@@ -39,6 +23,22 @@ $colorOff: #5e5d5d;
 
         &.inactive {
             border-color: transparent;
+        }
+    }
+
+    &.inactive {
+        background-color: $color-on;
+
+        .sw_item.active {
+            background-color: $color-off;
+        }
+    }
+
+    &.active {
+        background-color: $color-off;
+
+        .sw_item.active {
+            background-color: $color-on;
         }
     }
 }

@@ -1,24 +1,3 @@
-@import "/src/const/style/global";
-@import "/src/const/style/mixins";
-
 .SimpleControlCard {
-    @include flex-center;
-
-    padding: 10px 16px;
-    gap: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-    width: fit-content;
-    background-color: rgb(255 255 255 / 62%);
-
-    .SimpleControlCard_icon {
-        width: 30px;
-        height: 30px;
-
-        //border: 1px solid yellow;
-    }
-
-    .SimpleControlCard_content {
-        @include flex-center-col;
-    }
+    display: flex;
 }

@@ -5,6 +5,9 @@
 import { Meta } from '@storybook/react/*';
 import { StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import { Dark } from 'widgets/PageError/ui/PageError.stories';
 import { Button, EButtonSize, EButtonTheme } from './Button';
 
 const meta = {
@@ -40,6 +43,9 @@ export const Configurable: Story = {
         theme: EButtonTheme.OUTLINE,
     },
 };
+
+export const ConfigurableDark = { ...Configurable };
+ConfigurableDark.decorators = [ThemeDecorator(EGlobalThemes.DARK)];
 
 export const Clear: Story = {
     args: {
