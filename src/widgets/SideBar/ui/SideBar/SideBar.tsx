@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
-import { Button, EThemeButton } from 'shared/ui/Button/Button';
+import { Button, EButtonTheme } from 'shared/ui/Button/Button';
 import cls from './SideBar.module.scss';
 
 interface ISideBarProps {
@@ -14,7 +14,7 @@ export const SideBar: FC<ISideBarProps> = (props) => {
     const [collapsed, setCollapsed] = useState<boolean>(() => false);
     return (
         <div className={cn(cls.SideBar, { [cls.collapsed]: collapsed }, [className])}>
-            <Button theme={EThemeButton.COLLAPSER} onClick={() => setCollapsed((a) => !a)}>
+            <Button theme={EButtonTheme.COLLAPSER} onClick={() => setCollapsed((a) => !a)}>
                 {collapsed ? '>' : '<'}
             </Button>
         </div>

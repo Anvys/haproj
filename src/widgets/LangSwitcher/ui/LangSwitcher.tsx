@@ -1,7 +1,7 @@
 import { FC, useCallback } from 'react';
 // import { cn } from 'shared/lib/classNames/classNames';
 // import cls from './LangSwitcher.module.scss';
-import { Button, EThemeButton } from 'shared/ui/Button/Button';
+import { Button, EButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 
 interface ILangSwitcherProps {
@@ -18,7 +18,7 @@ export const LangSwitcher: FC<ILangSwitcherProps> = () => {
     );
     return (
         <Button
-            theme={EThemeButton.CLEAR}
+            theme={EButtonTheme.CLEAR}
             onClick={doLangToggle}
         >
             {t('Язык')}
