@@ -1,10 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from 'shared/lib/classNames/classNames';
-import cls2 from './AppLink.module.scss';
-import * as cls from './AppLink.module.scss';
-
-console.error('DEFAULT IMPORT CLASS NAME: ', cls2);
+import cls from './AppLink.module.scss';
 
 export enum ELinkTheme {
     PRIMARY = 'primary',

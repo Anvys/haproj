@@ -7,8 +7,22 @@ import { buildCssLoader } from './loaders/buildCssLoader';
 export const buildLoaders = (options: TBuildOptions): ModuleOptions['rules'] => {
     const isDev = options.mode === 'development';
 
-    const cssLoader = buildCssLoader();
-
+    const scssLoader = buildCssLoader();
+    const tempScss = {
+        test: /\.s[ac]ss$/i,
+        use: [
+            'style-loader',
+            'css-loader',
+            'sass-loader',
+        ],
+    };
+    const cssLoader = {
+        test: /\.css$/i,
+        use: [
+            'style-loader',
+            'css-loader',
+        ],
+    };
     const svgrLoader = {
         test: /\.svg$/,
         use: [
@@ -71,11 +85,13 @@ export const buildLoaders = (options: TBuildOptions): ModuleOptions['rules'] => 
     };
 
     return [
+
         fileLoader,
         svgrLoader,
         babelLoader,
         tsLoader,
-        cssLoader,
-        // imageLoader,
+        tempScss,
+        // scssLoader,
+        // cssLoader,
     ];
 };

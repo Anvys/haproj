@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
 import { Button, EThemeButton } from 'shared/ui/Button/Button';
-import * as cls from './SideBar.module.scss';
+import cls from './SideBar.module.scss';
 
 interface ISideBarProps {
     className?: string

@@ -1,6 +1,6 @@
 import { FC, useCallback } from 'react';
 // import { cn } from 'shared/lib/classNames/classNames';
-// import * as cls from './LangSwitcher.module.scss';
+// import cls from './LangSwitcher.module.scss';
 import { Button, EThemeButton } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 

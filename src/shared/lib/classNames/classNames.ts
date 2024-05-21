@@ -1,6 +1,10 @@
 type TModification = Record<string, string | boolean>
 
-export const classNames = (mainClass: string, mod: TModification = {}, additional: (string | undefined)[] = []) => [
+export const classNames = (
+    mainClass: string,
+    mod: TModification = {},
+    additional: (string | undefined)[] = [],
+) => [
     mainClass,
     ...(
         Object.entries(mod)

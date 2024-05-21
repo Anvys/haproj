@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
 import { Loader } from 'shared/ui/Loader/Loader';
-import * as cls from './PageLoader.module.scss';
+import cls from './PageLoader.module.scss';
 
 interface IPageLoaderProps {
     className?: string

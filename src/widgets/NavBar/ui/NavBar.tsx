@@ -5,7 +5,7 @@ import { cn } from 'shared/lib/classNames/classNames';
 import { SimpleThemeSwitch } from 'shared/ui/ThemeSwitch/ui/SimpleThemeSwitch';
 import { AppLink, ELinkTheme } from 'shared/ui/AppLink/AppLink';
 import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
-import * as cls from './NavBar.module.scss';
+import cls from './NavBar.module.scss';
 
 interface INavBarProps {
     className?: string
