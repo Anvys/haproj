@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
 // import React, {FC, useCallback, useEffect, useRef, useState} from "react";
 // import "./NavBar.scss"
-import { SimpleThemeSwitch } from 'shared/ui/ThemeSwitch/ui/SimpleThemeSwitch';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher/ui/ThemeSwitcher';
 import { AppLink, ELinkTheme } from 'shared/ui/AppLink/AppLink';
 import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
 import cls from './NavBar.module.scss';
@@ -26,7 +26,7 @@ export const NavBar: FC<INavBarProps> = (props) => {
             </div>
             <div className={cn(cls.switchers)}>
                 <LangSwitcher />
-                <SimpleThemeSwitch />
+                <ThemeSwitcher />
             </div>
         </div>
     );

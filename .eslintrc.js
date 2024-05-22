@@ -53,6 +53,8 @@ module.exports = {
         'consistent-return': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-uses-react': 'off',
+        'jsx-a11y/click-events-have-key-events': 'warn',
+        'jsx-a11y/no-static-element-interactions': 'warn',
     },
     globals: {
         __IS_DEV__: true,

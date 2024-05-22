@@ -4,33 +4,24 @@
 
 import { Meta } from '@storybook/react/*';
 import { StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
-import { SimpleSwitch } from 'shared/ui/Switch/SimpleSwitch';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 const meta = {
-    title: 'shared/SimpleSwitch',
-    component: SimpleSwitch,
+    title: 'widget/ThemeSwitcher',
+    component: ThemeSwitcher,
     parameters: {
     },
-    args: { onChange: fn() },
-} satisfies Meta<typeof SimpleSwitch>;
+    args: { },
+} satisfies Meta<typeof ThemeSwitcher>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Configurable: Story = {
-    argTypes: {
-        isActive: {
-            options: [true, false],
-            control: { type: 'radio' },
-        },
-    },
-    args: {
-        isActive: false,
-        // onChange: () => {},
-    },
+    argTypes: { },
+    args: { },
 };
 
 export const ConfigurableDark = { ...Configurable };
