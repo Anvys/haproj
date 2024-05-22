@@ -1,9 +1,9 @@
 {
+  "light": "light",
   "Обновить страницу": "Reload page",
   "Произошла непредвиденная ошибка": "Something went wrong",
-  "Язык": "Lang",
-  "light": "light",
   "Светлая": "Light",
+  "Тема": "Theme",
   "Темная": "Dark",
-  "Тема": "Theme"
+  "Язык": "Lang"
 }

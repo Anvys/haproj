@@ -1,7 +1,11 @@
 import {
     FC, ReactNode, useMemo, useState,
 } from 'react';
-import { EGlobalThemes, LS_THEME_KEY, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import {
+    EGlobalThemes,
+    LS_THEME_KEY,
+    ThemeContext,
+} from 'app/providers/ThemeProvider/lib/ThemeContext';
 
 const defaultTheme = localStorage.getItem(LS_THEME_KEY) as EGlobalThemes || EGlobalThemes.LIGHT;
 

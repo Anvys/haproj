@@ -1,4 +1,4 @@
-import { TLight_All } from 'entity/SmartEntityCards/types/SmartEntities/Light';
+import { TLightAll } from 'entity/SmartEntityCards/types/SmartEntities/Light';
 import { FC } from 'react';
 import { SimpleSwitch } from 'shared/ui/Switch/SimpleSwitch';
 
@@ -6,14 +6,14 @@ import './Light.scss';
 import { SimpleControlCard } from '../SimpleControlCard/SimpleControlCard';
 
 type TProps = {
-    item: TLight_All
+    item: TLightAll
     onPropChange: (prop: string, value: unknown) => void
 
     isIcon?: boolean
 }
 
-const icon_powerOn = require('../../../../../src/assets/svg/light/light_on.svg');
-const icon_powerOff = require('../../../../../src/assets/svg/light/light_off.svg');
+// const icon_powerOn = require('../../../../../src/assets/svg/light/light_on.svg');
+// const icon_powerOff = require('../../../../../src/assets/svg/light/light_off.svg');
 
 export const Light: FC<TProps> = ({
     item,
@@ -35,11 +35,12 @@ export const Light: FC<TProps> = ({
     //
     // </div>
     return (
-        <SimpleControlCard
-            name={item.name}
-            icon={item.power ? icon_powerOn : icon_powerOff}
-        >
-            <SimpleSwitch selectedValue={item.power} onChange={onTogglePower} />
-        </SimpleControlCard>
+        <div>-</div>
+        // <SimpleControlCard
+        //     name={item.name}
+        //     icon={item.power ? icon_powerOn : icon_powerOff}
+        // >
+        //     {/*<SimpleSwitch selectedValue={item.power} onChange={onTogglePower} />*/}
+        // </SimpleControlCard>
     );
 };

@@ -16,4 +16,4 @@ export type TLight_bri = TLight & {
     brightness: number
 }
 
-export type TLight_All = TLight | TLight_bri
+export type TLightAll = TLight | TLight_bri

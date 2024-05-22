@@ -1,5 +1,9 @@
 import { useContext } from 'react';
-import { EGlobalThemes, LS_THEME_KEY, ThemeContext } from 'app/providers/ThemeProvider/lib/ThemeContext';
+import {
+    EGlobalThemes,
+    LS_THEME_KEY,
+    ThemeContext,
+} from 'app/providers/ThemeProvider/lib/ThemeContext';
 
 type TUseThemeResult = {
     theme: EGlobalThemes
