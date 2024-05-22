@@ -19,10 +19,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
       - name: install modules
-        run: yarn install --frozen-lockfile --non-interactive --silent --ignore-scripts
+        run: yarn install --frozen-lockfile --non-interactive --silent
       - name: build project
         run: npm run build:prod
-        if: always()
       - name: eslint typescript
         run: npm run lint:ts
         if: always()
