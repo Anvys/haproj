@@ -14,7 +14,7 @@ export const buildPlugins = (options: TBuildOptions): Configuration['plugins'] =
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
-        new ProgressPlugin(),
+
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
@@ -22,10 +22,12 @@ export const buildPlugins = (options: TBuildOptions): Configuration['plugins'] =
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new webpack.HotModuleReplacementPlugin(),
+
     ];
 
     if (isDev) {
+        plugins.push(new ProgressPlugin());
+        plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new ForkTsCheckerWebpackPlugin());
         plugins.push(new ReactRefreshWebpackPlugin());
     }

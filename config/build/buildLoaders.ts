@@ -1,6 +1,5 @@
 import { ModuleOptions } from 'webpack';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { TBuildOptions } from './types/types';
 import { buildCssLoader } from './loaders/buildCssLoader';
 
@@ -8,21 +7,21 @@ export const buildLoaders = (options: TBuildOptions): ModuleOptions['rules'] => 
     const isDev = options.mode === 'development';
 
     const scssLoader = buildCssLoader();
-    const tempScss = {
-        test: /\.s[ac]ss$/i,
-        use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader',
-        ],
-    };
-    const cssLoader = {
-        test: /\.css$/i,
-        use: [
-            'style-loader',
-            'css-loader',
-        ],
-    };
+    // const tempScss = {
+    //     test: /\.s[ac]ss$/i,
+    //     use: [
+    //         'style-loader',
+    //         'css-loader',
+    //         'sass-loader',
+    //     ],
+    // };
+    // const cssLoader = {
+    //     test: /\.css$/i,
+    //     use: [
+    //         'style-loader',
+    //         'css-loader',
+    //     ],
+    // };
     const svgrLoader = {
         test: /\.svg$/,
         use: [
@@ -90,7 +89,7 @@ export const buildLoaders = (options: TBuildOptions): ModuleOptions['rules'] => 
         svgrLoader,
         babelLoader,
         tsLoader,
-        tempScss,
+        scssLoader,
         // scssLoader,
         // cssLoader,
     ];
