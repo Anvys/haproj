@@ -22,6 +22,11 @@ export default ({ config }: {config: webpack.Configuration}) => {
         return rule;
     });
 
+    /**
+     * Убираем прогресс плагин
+     */
+    config.plugins = config.plugins.filter((plugin) => !(plugin instanceof webpack.ProgressPlugin));
+
     config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
