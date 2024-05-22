@@ -17,8 +17,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: install yarn
+        run: npm install yarn@latest -g
+      - name: yarn version 4x
+        run: yarn set version 4.2.2
       - name: install modules
-        run: npm install --legacy-peer-deps
+        run: yarn install
       - name: build project
         run: npm run build:prod
         if: always()
