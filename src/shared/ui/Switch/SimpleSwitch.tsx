@@ -1,23 +1,30 @@
 import { FC } from 'react';
-import './SimpleSwitch.scss';
+import { cn } from 'shared/lib/classNames/classNames';
+import cls from './SimpleSwitch.module.scss';
 
-type TProps = {
-    selectedValue: boolean
-
+interface ISimpleSwitchProps {
+    isActive: boolean
     onChange: (v: boolean) => void
+    className?: string
+    // children?: React.ReactNode
 }
-export const SimpleSwitch: FC<TProps> = ({
-    selectedValue,
-    onChange,
-}) => (
-    <div
-        className={`Switch ${selectedValue ? 'inactive' : 'active'}`}
-        onClick={() => onChange(!selectedValue)}
-    >
-        {/* Выключено / Лево */}
-        <div className={`sw_item ${selectedValue ? 'inactive' : 'active'}`} />
 
-        {/* Включено / Право */}
-        <div className={`sw_item ${selectedValue ? 'active' : 'inactive'}`} />
-    </div>
-);
+export const SimpleSwitch: FC<ISimpleSwitchProps> = (props) => {
+    const {
+        className,
+        isActive,
+        onChange,
+    } = props;
+    return (
+        <div
+            className={cn(cls.SimpleSwitch, { [cls.active]: isActive }, [className])}
+            onClick={() => onChange(!isActive)}
+        >
+            {/* Выключено / Лево */}
+            <div className={cn(cls.sw_item, { [cls.sw_itemActive]: !isActive })} />
+
+            {/* Включено / Право */}
+            <div className={cn(cls.sw_item, { [cls.sw_itemActive]: isActive })} />
+        </div>
+    );
+};

@@ -1,0 +1,31 @@
+.SimpleSwitch {
+    display: flex;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 2px 4px;
+    width: fit-content;
+    cursor: pointer;
+    background-color: var(--bg-color);
+
+    --item-bg-color: var(--bg-color-inverted);
+}
+
+.active {
+    background-color: var(--bg-color-inverted);
+
+    --item-bg-color: var(--bg-color);
+}
+
+.sw_item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+.sw_itemActive {
+    background-color: var(--item-bg-color);
+}
