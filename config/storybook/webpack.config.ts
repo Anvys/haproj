@@ -25,6 +25,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
     /**
      * Убираем прогресс плагин
      */
+    // eslint-disable-next-line no-param-reassign
     config.plugins = config.plugins.filter((plugin) => !(plugin instanceof webpack.ProgressPlugin));
 
     config.module.rules.push({
