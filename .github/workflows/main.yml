@@ -17,8 +17,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
       - name: install modules
-        run: yarn --frozen-lockfile --non-interactive --silent --ignore-scripts
+        run: yarn install --frozen-lockfile --non-interactive --silent --ignore-scripts
       - name: build project
         run: npm run build:prod
         if: always()
