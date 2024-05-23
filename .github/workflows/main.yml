@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
       - name: install modules
-        run: yarn install
+        run: yarn install --no-lockfile
       - name: build project
         run: npm run build:prod
       - name: eslint typescript
@@ -37,15 +37,19 @@ jobs:
         id: lokitest
         run: npm run test:ui:ci
         if: always()
-      - name: Debug Job Failure
-        run: npm run test:ui:report
-        if: always() && (steps.lokitest.outcome == 'failure')
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: loki test fail report
-          path: .loki/**/*
-        if: always() && (steps.lokitest.outcome == 'failure')
+
+#      - name: Debug Job Failure
+#        run: npm run test:ui:report
+#        if: always() && (steps.lokitest.outcome == 'failure')
+#      - name: Archive code coverage results
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: loki test fail report
+#          path: .loki/**/*
+#        if: always() && (steps.lokitest.outcome == 'failure')
+
+
+
 #      - name: install modules
 #        run: npm install --legacy-peer-deps
 #      - name: build project
