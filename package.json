@@ -119,6 +119,7 @@
   },
   "packageManager": "yarn@4.2.2",
   "loki": {
+    "diffingEngine": "looks-same",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
