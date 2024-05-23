@@ -34,14 +34,18 @@ jobs:
         run: npm run storybook:build
         if: always()
       - name: screenshot testing
+        id: lokitest
         run: npm run test:ui:ci
         if: always()
+      - name: Debug Job Failure
+        run: npm run test:ui:report
+        if: always() && (steps.lokitest.outcome == 'failure')
       - name: Archive code coverage results
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
-          path: .loki/difference/*.png
-        if: failure()
+          path: .loki/**/*
+        if: always() && (steps.lokitest.outcome == 'failure')
 #      - name: install modules
 #        run: npm install --legacy-peer-deps
 #      - name: build project
