@@ -41,7 +41,7 @@ jobs:
         with:
           name: code-coverage-report
           path: .loki/difference/*.png
-          if: failure()
+        if: failure()
 #      - name: install modules
 #        run: npm install --legacy-peer-deps
 #      - name: build project
