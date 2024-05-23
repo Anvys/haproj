@@ -3,6 +3,18 @@
 @import "themes/light";
 @import "themes/dark";
 
+@font-face {
+    font-family: Consolas;
+    font-weight: normal;
+    src: url("shared/assets/fonts/Consolas/Consolas.woff") format("woff");
+}
+
+@font-face {
+    font-family: Consolas;
+    font-weight: bold;
+    src: url("shared/assets/fonts/Consolas/Consolas-Bold.woff") format("woff");
+}
+
 .App {
     font: var(--font-m);
     background: var(--bg-color);
