@@ -17,6 +17,9 @@ const config: StorybookConfig = {
         name: '@storybook/react-webpack5',
         options: {},
     },
+    core: {
+        disableTelemetry: true,
+    },
 
     /**
    * Для работы реакта в сторибук
