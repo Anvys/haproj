@@ -3,7 +3,7 @@ import { cn } from 'shared/lib/classNames/classNames';
 // import React, {FC, useCallback, useEffect, useRef, useState} from "react";
 // import "./NavBar.scss"
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher/ui/ThemeSwitcher';
-import { AppLink, ELinkTheme } from 'shared/ui/AppLink/AppLink';
+import { AppLink, EAppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
 import cls from './NavBar.module.scss';
 
@@ -16,14 +16,14 @@ export const NavBar: FC<INavBarProps> = (props) => {
     return (
         <div className={cn(cls.NavBar, {}, [className])}>
             <div />
-            <div className={cn(cls.links)}>
-                <AppLink theme={ELinkTheme.SECONDARY} to="/welcome">
-                    Welcome
-                </AppLink>
-                <AppLink theme={ELinkTheme.SECONDARY} to="/about">
-                    About
-                </AppLink>
-            </div>
+            {/* <div className={cn(cls.links)}> */}
+            {/*    <AppLink theme={EAppLinkTheme.SECONDARY} to="/welcome"> */}
+            {/*        Welcome */}
+            {/*    </AppLink> */}
+            {/*    <AppLink theme={EAppLinkTheme.SECONDARY} to="/about"> */}
+            {/*        About */}
+            {/*    </AppLink> */}
+            {/* </div> */}
             <div className={cn(cls.switchers)}>
                 <LangSwitcher />
                 <ThemeSwitcher />

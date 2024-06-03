@@ -1,14 +1,13 @@
-import { Button } from 'shared/ui/Button/Button';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const WelcomePage = () => (
-    <div>
-        <h1>WelcomePage</h1>
-
-        asdA
-
-        <Button>togle theme</Button>
-    </div>
-);
+const WelcomePage = () => {
+    const { t } = useTranslation();
+    return (
+        <div>
+            <h1>{t('WelcomePage')}</h1>
+        </div>
+    );
+};
 
 export default WelcomePage;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from 'shared/lib/classNames/classNames';
 import cls from './AppLink.module.scss';
 
-export enum ELinkTheme {
+export enum EAppLinkTheme {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
 }
@@ -11,12 +11,12 @@ export enum ELinkTheme {
 type TAppLinkProps = {
     to: string
     className?: string
-    theme?: ELinkTheme
+    theme?: EAppLinkTheme
     children?: ReactNode
 }
 export const AppLink: FC<TAppLinkProps> = ({
     to,
-    theme = ELinkTheme.PRIMARY,
+    theme = EAppLinkTheme.PRIMARY,
     className,
     children,
 }) => (

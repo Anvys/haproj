@@ -1,6 +1,7 @@
 import { RouteProps } from 'react-router-dom';
 import { WelcomePage } from 'pages/WelcomePage';
 import { AboutPage } from 'pages/AboutPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
 export enum EAppRoutes {
     WELCOME = 'welcome',
@@ -25,6 +26,6 @@ export const routeConfig: Record<EAppRoutes, RouteProps> = {
     },
     [EAppRoutes.NOT_FOUND]: {
         path: RoutePath.not_found,
-        element: <div>404</div>,
+        element: <NotFoundPage />,
     },
 };

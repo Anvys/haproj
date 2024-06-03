@@ -6,7 +6,7 @@ import { Meta } from '@storybook/react/*';
 import { StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
-import { AppLink, ELinkTheme } from './AppLink';
+import { AppLink, EAppLinkTheme } from './AppLink';
 
 const meta = {
     title: 'shared/AppLink',
@@ -27,7 +27,7 @@ export const Configurable: Story = {
         },
         theme: {
             // @ts-ignore
-            options: ELinkTheme,
+            options: EAppLinkTheme,
             control: { type: 'radio' },
         },
     },
@@ -43,13 +43,13 @@ export const Primary: Story = {
     args: {
         to: '/somelink',
         children: 'AppLink!',
-        theme: ELinkTheme.PRIMARY,
+        theme: EAppLinkTheme.PRIMARY,
     },
 };
 export const Secondary: Story = {
     args: {
         to: '/somelink',
         children: 'AppLink!',
-        theme: ELinkTheme.SECONDARY,
+        theme: EAppLinkTheme.SECONDARY,
     },
 };

@@ -10,3 +10,11 @@
 .collapsed {
     width: var(--sidebar-width-collapsed);
 }
+
+.items{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
