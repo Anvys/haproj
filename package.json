@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start:dev": "webpack serve --env mode=development",
     "build:dev": "webpack --env mode=development",
-    "start": "webpack serve --env mode=development",
     "build:prod": "webpack --env mode=production",
     "build:prod+ver": "(npm version patch --force) && (webpack --env mode=production) && (npm run formBin)",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",

@@ -5,7 +5,7 @@ import cls from './Button.module.scss';
 
 export enum EButtonTheme {
     CLEAR = 'clear',
-    // COLLAPSER = 'collapser',
+    COLLAPSER = 'collapser',
     OUTLINE = 'outline',
     OUTLINE_FILLED = 'outlineFilled',
     OUTLINE_FILLED_INVERTED = 'outlineFilledInverted',

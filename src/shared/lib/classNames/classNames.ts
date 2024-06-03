@@ -1,14 +1,14 @@
-type TModification = Record<string, string | boolean>
+export type TCNModification = Record<string, string | boolean | undefined>
 
 export const classNames = (
     mainClass: string,
-    mod: TModification = {},
+    mod: TCNModification = {},
     additional: (string | undefined)[] = [],
 ) => [
     mainClass,
     ...(
         Object.entries(mod)
-            .filter(([_, value]) => Boolean(value))
+            .filter(([, value]) => Boolean(value))
             .map(([className]) => className)
     ),
     ...(

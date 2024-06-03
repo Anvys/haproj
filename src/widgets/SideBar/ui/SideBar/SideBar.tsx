@@ -14,7 +14,7 @@ export const SideBar: FC<ISideBarProps> = (props) => {
     const [collapsed, setCollapsed] = useState<boolean>(() => false);
     return (
         <div className={cn(cls.SideBar, { [cls.collapsed]: collapsed }, [className])}>
-            <Button theme={EButtonTheme.OUTLINE} isSquare onClick={() => setCollapsed((a) => !a)}>
+            <Button theme={EButtonTheme.COLLAPSER} onClick={() => setCollapsed((a) => !a)}>
                 {collapsed ? '>' : '<'}
             </Button>
         </div>

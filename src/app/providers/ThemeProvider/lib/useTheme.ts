@@ -15,6 +15,7 @@ export const useTheme = (): TUseThemeResult => {
     const doToggleTheme = () => {
         const newTheme = theme === EGlobalThemes.LIGHT ? EGlobalThemes.DARK : EGlobalThemes.LIGHT;
         setTheme(newTheme);
+        document.body.className = newTheme;
         localStorage.setItem(LS_THEME_KEY, newTheme);
     };
 

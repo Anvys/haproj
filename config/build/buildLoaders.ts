@@ -6,7 +6,7 @@ import { buildCssLoader } from './loaders/buildCssLoader';
 export const buildLoaders = (options: TBuildOptions): ModuleOptions['rules'] => {
     const isDev = options.mode === 'development';
 
-    const scssLoader = buildCssLoader();
+    const scssLoader = buildCssLoader(true);
     // const tempScss = {
     //     test: /\.s[ac]ss$/i,
     //     use: [
