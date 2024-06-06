@@ -59,4 +59,13 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+            rules: {
+                'max-len': 'off',
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
