@@ -16,6 +16,8 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     argTypes: { },
     args: {
+        isOpen: true,
+
         children: <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda atque consectetur culpa cum dolorem doloremque et fugiat libero magnam minima modi, molestiae molestias mollitia necessitatibus qui rerum similique suscipit.</div>,
     },
 };

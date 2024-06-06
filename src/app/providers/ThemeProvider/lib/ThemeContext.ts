@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
 export enum EGlobalThemes{
-    LIGHT = 'light',
-    DARK= 'dark',
+    LIGHT = 'lightThemeMain',
+    DARK= 'darkThemeMain',
 }
 
 type TThemeContext = {

@@ -16,8 +16,8 @@ const preview: Preview = {
     },
     decorators: [
         RouterDecorator,
-        ThemeDecorator(EGlobalThemes.LIGHT),
         StyleDecorator,
+        ThemeDecorator(EGlobalThemes.LIGHT),
         LangDecorator(),
     ],
 };
