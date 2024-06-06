@@ -1,22 +1,22 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
-import { PageError } from './PageError';
+import { PageLoader } from './PageLoader';
 
 const meta = {
-    title: 'widgets/PageError',
-    component: PageError,
-    argTypes: {
-        // backgroundColor: { control: 'color' },
-    },
-} satisfies Meta<typeof PageError>;
+    title: 'widgets/PageLoader',
+    component: PageLoader,
+    parameters: { },
+    args: { },
+} satisfies Meta<typeof PageLoader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const PrimaryLight: Story = {
-    args: {
-    },
+export const Primary: Story = {
+    argTypes: { },
+    args: { },
 };
-export const PrimaryDark: Story = { ...PrimaryLight };
+
+export const PrimaryDark = { ...Primary };
 PrimaryDark.decorators = [ThemeDecorator(EGlobalThemes.DARK)];

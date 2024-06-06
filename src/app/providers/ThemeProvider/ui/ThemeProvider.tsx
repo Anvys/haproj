@@ -10,10 +10,11 @@ import {
 const defaultTheme = localStorage.getItem(LS_THEME_KEY) as EGlobalThemes || EGlobalThemes.LIGHT;
 
 type ThemeProviderProps = {
+    initialTheme?: EGlobalThemes
     children?: ReactNode | undefined
 }
-export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-    const [theme, setTheme] = useState<EGlobalThemes>(() => defaultTheme);
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children, initialTheme }) => {
+    const [theme, setTheme] = useState<EGlobalThemes>(() => defaultTheme || initialTheme);
 
     const defaultValue = useMemo(() => ({
         theme,

@@ -21,6 +21,9 @@
 
 .collapser {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: -14px;
     top: calc(50vh - var(--navbar-height));
     width: 14px;
@@ -30,6 +33,12 @@
     background: var(--bg-color-inverted);
     border: 0;
     border-radius: 0 7px 7px 0;
+    &:hover{
+        box-shadow: none;
+    }
+    &:active{
+        box-shadow: none;
+    }
 }
 
 .outline {

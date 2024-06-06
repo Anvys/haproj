@@ -1,4 +1,5 @@
 import { Decorator } from '@storybook/react';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
 
 export const ThemeDecorator = (theme: EGlobalThemes): Decorator => (StoryComponent) => {
@@ -7,8 +8,10 @@ export const ThemeDecorator = (theme: EGlobalThemes): Decorator => (StoryCompone
      */
     document.body.className = theme;
     return (
-        <div className={`App ${theme}`}>
-            <StoryComponent />
-        </div>
+        <ThemeProvider initialTheme={theme}>
+            <div className={`App ${theme}`}>
+                <StoryComponent />
+            </div>
+        </ThemeProvider>
     );
 };

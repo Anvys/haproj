@@ -9,7 +9,7 @@ import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
 const meta = {
-    title: 'widget/ThemeSwitcher',
+    title: 'widgets/ThemeSwitcher',
     component: ThemeSwitcher,
     parameters: {
     },
