@@ -33,10 +33,12 @@
     background: var(--bg-color-inverted);
     border: 0;
     border-radius: 0 7px 7px 0;
-    &:hover{
+
+    &:hover {
         box-shadow: none;
     }
-    &:active{
+
+    &:active {
         box-shadow: none;
     }
 }
