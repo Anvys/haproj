@@ -1,9 +1,6 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
-// import React, {FC, useCallback, useEffect, useRef, useState} from "react";
-// import "./NavBar.scss"
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher/ui/ThemeSwitcher';
-import { AppLink, EAppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
 import cls from './NavBar.module.scss';
 

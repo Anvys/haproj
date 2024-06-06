@@ -1,10 +1,12 @@
-import { Button } from 'shared/ui/Button/Button';
+import { useTranslation } from 'react-i18next';
 
-const AboutPage = () => (
-    <div>
-        About Page
-        <Button>button</Button>
-    </div>
-);
+const AboutPage = () => {
+    const { t } = useTranslation();
+    return (
+        <div>
+            {t('About Page')}
+        </div>
+    );
+};
 
 export default AboutPage;

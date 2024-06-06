@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { useTranslation } from 'react-i18next';
+import { EGlobalThemes } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import cls from './ThemeSwitcher.module.scss';
 
 interface IThemeSwitchProps {
@@ -15,7 +16,7 @@ export const ThemeSwitcher: FC<IThemeSwitchProps> = (props) => {
     const { t } = useTranslation();
     return (
         <div
-            className={cn(cls.ThemeSwitch, { active: theme === 'light' }, [className])}
+            className={cn(cls.ThemeSwitch, { active: theme === EGlobalThemes.LIGHT }, [className])}
             onClick={doToggleTheme}
         >
             {t('Тема')}

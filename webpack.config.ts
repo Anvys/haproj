@@ -24,6 +24,7 @@ export default (env: TEnv) => {
         isDev,
     };
 
+    // eslint-disable-next-line no-console
     console.log('Webpack run in MODE: ', env.mode);
 
     return buildWebpack(options);
