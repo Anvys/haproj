@@ -1,7 +1,11 @@
 .Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     color: inherit;
-    padding: 2px 6px;
+    padding: 2px 10px;
+    height: fit-content;
 }
 
 .Button:hover {
@@ -21,9 +25,7 @@
 
 .collapser {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     right: -14px;
     top: calc(50vh - var(--navbar-height));
     width: 14px;
