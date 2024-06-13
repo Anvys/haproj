@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher/ui/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
+import { LoginForm } from 'features/AuthByUsername/ui/LoginForm/LoginForm';
+import { AccountControl } from 'features/AuthByUsername';
 import cls from './NavBar.module.scss';
 
 interface INavBarProps {
@@ -10,9 +12,10 @@ interface INavBarProps {
 }
 export const NavBar: FC<INavBarProps> = (props) => {
     const { className } = props;
+    const isAuth = false;
     return (
         <div className={cn(cls.NavBar, {}, [className])}>
-            <div />
+            {/* <div /> */}
             {/* <div className={cn(cls.links)}> */}
             {/*    <AppLink theme={EAppLinkTheme.SECONDARY} to="/welcome"> */}
             {/*        Welcome */}
@@ -25,6 +28,7 @@ export const NavBar: FC<INavBarProps> = (props) => {
                 <LangSwitcher />
                 <ThemeSwitcher />
             </div>
+            <AccountControl />
         </div>
     );
 };

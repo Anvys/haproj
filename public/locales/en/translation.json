@@ -9,5 +9,9 @@
   "WelcomePage": "WelcomePage",
   "Главная": "Main",
   "О сайте": "About",
-  "About Page": "About Page"
+  "About Page": "About Page",
+  "Войти": "Войти",
+  "Логин": "Логин",
+  "Пароль": "Пароль",
+  "Выйти": "Выйти"
 }

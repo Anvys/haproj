@@ -1,0 +1,40 @@
+.Input {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+    align-self: center;
+
+    /* height: min-content; */
+    height: 38px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+
+    &:focus {
+        border: 1px solid var(--primary-color);
+    }
+}
+
+.primary {
+    border: 1px solid transparent;
+}
+
+.login {
+    font: var(--font-login);
+    background-color: #fff;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+}
+
+.filter {
+    border: 1px dashed var(--secondary-color);
+    height: var(--font-line-m);
+    padding: 14px;
+
+    &:focus {
+        border: 1px solid var(--secondary-color);
+    }
+}

@@ -5,10 +5,7 @@
     background: var(--bg-color-inverted);
     transition-property: width;
     transition-duration: 0.2s;
-}
-
-.collapsed {
-    width: var(--sidebar-width-collapsed);
+    color: var(--primary-color-inverted);
 }
 
 .items {
@@ -17,4 +14,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .items {
+        margin-left: 20px;
+    }
 }
