@@ -25,7 +25,8 @@
     font: var(--font-login);
     background-color: #fff;
     width: 100%;
-    height: fit-content;
+    max-width: 140px;
+    height: var(--font-line-m);
     padding: 5px;
 }
 

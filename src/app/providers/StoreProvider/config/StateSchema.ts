@@ -6,6 +6,7 @@ import { AxiosInstance } from 'axios';
 import { NavigateOptions } from 'react-router';
 import { To } from 'react-router-dom';
 import { LoginFormSchema } from 'features/AuthByUsername';
+import { ILampSchema } from 'entities/Lamp';
 
 /**
  * OLD REDUX
@@ -20,6 +21,7 @@ export type CombinedState<S> = EmptyObject & S
 
 export interface StateSchema {
     user: IUserSchema;
+    lamp: ILampSchema
 
     // Async reducers
     loginForm?: LoginFormSchema;
