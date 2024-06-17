@@ -1,19 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { api } from '../../api/api';
 import { lampSlice, sliceName } from '../../slice/lampSlice';
+import { api } from '../../api/api';
 
-interface IGetLampsInput {
-}
-
-interface IGetLampsReturn {
-
-}
-
-export const getLamps = createAsyncThunk<
-    IGetLampsReturn,
-    IGetLampsInput
+export const requestLamps = createAsyncThunk<
+    void,
+    void
 >(
-    `${sliceName}/getLamps`,
+    `${sliceName}/requestLamps`,
     async (authData, thunkApi) => {
         const { dispatch, rejectWithValue } = thunkApi;
         try {

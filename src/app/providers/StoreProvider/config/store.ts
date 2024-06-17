@@ -5,6 +5,7 @@ import { To } from 'react-router-dom';
 import { userSlice } from 'entities/User';
 import { useDispatch } from 'react-redux';
 import { commonInstance } from 'shared/config/api/axios';
+import { lampSlice } from 'entities/Lamp';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
@@ -16,6 +17,7 @@ export function createReduxStore(
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         user: userSlice.reducer,
+        lamp: lampSlice.reducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);

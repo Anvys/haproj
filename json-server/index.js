@@ -40,7 +40,7 @@ server.post('/login', (req, res) => {
 });
 
 server.use((req, res, next) => {
-    if (!req.headers.authorization) {
+    if (!req.headers.sessionid) {
         return res.status(403).json({ message: 'AUTH ERROR' });
     }
 

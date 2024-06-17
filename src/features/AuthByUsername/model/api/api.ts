@@ -12,7 +12,7 @@ export const api = {
     auth: (user: string, password: string) => commonInstance.post(endpoints.auth, { user, password })
         .then((data) => getResponseObj<TAuthResponse>(data))
         .catch((e) => getResponseERRObj(e)),
-    session: (sid: string) => commonInstance.get(endpoints.session, getSimpleHeader(sid))
+    session: () => commonInstance.get(endpoints.session, getSimpleHeader())
         .then((data) => getResponseObj<TPingResponse>(data))
         .catch((e) => getResponseERRObj(e)),
 };

@@ -11,32 +11,37 @@
     {
       "id": "1",
       "name": "lamp1",
+      "description": "desc",
       "type": "simple",
-      "status": "1"
+      "status": 1
     },
     {
       "id": "2",
       "name": "lamp2",
+      "description": "desc",
       "type": "simple",
-      "status": "0"
+      "status": 0
     },
     {
       "id": "3",
       "name": "lamp3",
+      "description": "desc",
       "type": "simple",
-      "status": "1"
+      "status": 1
     },
     {
       "id": "4",
       "name": "lamp4",
+      "description": "desc",
       "type": "simple",
-      "status": "0"
+      "status": 0
     },
     {
-      "id": "4",
-      "name": "lamp4",
+      "id": "5",
+      "name": "lamp5",
+      "description": "desc",
       "type": "bright",
-      "status": "1",
+      "status": 1,
       "brightness": "64"
     }
   ]

@@ -3,10 +3,11 @@ export enum ELampStatus{
     ON = 1,
 }
 
-type TLampType = 'simple' | 'bright'
+export type TLampType = 'simple' | 'bright'
 export type TLamp = {
     id: string
     name: string
+    description: string
     status: ELampStatus
     type: TLampType
 }

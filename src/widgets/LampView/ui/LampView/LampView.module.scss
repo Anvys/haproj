@@ -1,0 +1,21 @@
+.LampView {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.lamp {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 160px;
+    border-radius: 10px;
+    //border: 1px solid var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+}
