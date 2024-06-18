@@ -1,0 +1,25 @@
+{
+  "camera": [
+    {
+      "id": "1",
+      "name": "camera1",
+      "description": "desc",
+      "type": "camera",
+      "status": 1
+    },
+    {
+      "id": "2",
+      "name": "camera2",
+      "description": "desc",
+      "type": "camera",
+      "status": 1
+    },
+    {
+      "id": "3",
+      "name": "camera3",
+      "description": "desc",
+      "type": "camera",
+      "status": 0
+    }
+  ]
+}
