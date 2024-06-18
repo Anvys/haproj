@@ -5,6 +5,7 @@ const path = require('path');
 const server = jsonServer.create();
 
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+const CameraRouter = jsonServer.router(path.resolve(__dirname, 'db_camera.json'));
 
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
@@ -48,6 +49,7 @@ server.use((req, res, next) => {
 });
 
 server.use(router);
+server.use(CameraRouter);
 
 server.listen(8000, () => {
     console.log('server is running on 8000 port');

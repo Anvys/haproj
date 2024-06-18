@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { cn } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
-import { lampTypes } from 'entities/Lamp/lib/lampTypes';
 import { Button, EButtonTheme } from 'shared/ui/Button/Button';
-import { ELampStatus, TLampAny } from 'entities/Lamp/model/types/ILamp';
 import { lampStatus } from 'entities/Lamp/lib/lampStatus';
 import { useTranslation } from 'react-i18next';
+import { ELampStatus, TLampAny } from '../../model/types/ILamp';
+import { lampTypes } from '../../lib/lampTypes';
 import cls from './LampCard.module.scss';
 
 interface ILampCardProps {

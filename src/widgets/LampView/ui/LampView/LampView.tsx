@@ -5,7 +5,7 @@ import { getLamps, lampSlice, requestLamps } from 'entities/Lamp';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
 import { TLampAny } from 'entities/Lamp/model/types/ILamp';
-import { LampCard } from 'widgets/LampView/ui/LampCard/LampCard';
+import { LampCard } from 'entities/Lamp/ui/LampCard/LampCard';
 import cls from './LampView.module.scss';
 
 interface ILampViewProps {
@@ -27,7 +27,7 @@ export const LampView: FC<ILampViewProps> = (props) => {
     return (
         <div className={cn(cls.LampView, {}, [className])}>
             {lamps.map((v) => (
-                <LampCard onUpdate={updateLamp} item={v} />
+                <LampCard onUpdate={updateLamp} item={v} key={v.id} />
             ))}
         </div>
     );
